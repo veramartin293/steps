@@ -1,0 +1,23 @@
+<div class="tu-informacion">
+	<div class="tu-informacion__header">
+		<h2>Tu información</h2>
+	</div>
+
+	<div class="tu-informacion__content" *ngIf="activeStep$ | async as activeStep">
+		<app-step-progress 
+		[iconPathsOfSteps]="iconPathStepsArray" 
+		[activeStep$]="activeStep$"
+		></app-step-progress>
+
+		<h3>Paso {{ activeStep }}: </h3>
+
+		<ng-container [ngSwitch]="activeStep">
+			<app-datos-personales *ngSwitchCase="1"></app-datos-personales>
+			<app-escolaridad *ngSwitchCase="2"></app-escolaridad>
+			<app-intereses *ngSwitchCase="3"></app-intereses>
+		</ng-container>
+	</div>
+
+	<button class="next-btn" (click)="goNextStep()">Siguiente</button>
+	<button class="prev-btn" (click)="goPreviousStep()">Anterior</button>
+</div>

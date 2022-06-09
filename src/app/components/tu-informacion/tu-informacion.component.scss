@@ -1,0 +1,39 @@
+.tu-informacion {
+	&__header {
+		height: 120px;
+		background-image: url('../../../assets/bg.jpg');
+		position: relative;
+		margin-bottom: 5px;
+
+		h2 {
+			background-color: rgb(248, 248, 248);
+			width: 80%;
+			padding: 15px 30px 20px 10px;
+			position: absolute;
+			bottom: 0;
+			font-weight: 300;
+		}
+	}
+
+	&__content {
+		margin: 0 10px;
+
+		h3 {
+			padding: 5px 0;
+			font-weight: 300;
+			color: rgb(51, 51, 137);
+		}
+	}
+
+	.next-btn {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+	}
+	
+	.prev-btn {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+	}
+}

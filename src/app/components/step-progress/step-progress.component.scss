@@ -1,0 +1,50 @@
+.progress {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	padding: 5px;
+
+	&__step {
+		height: 40px;
+		width: 40px;
+		border-radius: 50%;
+		border: 4px solid gray;
+		border-style: double;
+		position: relative;
+		transition: all .2s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&.active {
+			border-color: rgb(18, 200, 54);
+			border-style: solid;
+		}
+
+		i {
+			color: gray;
+			font-size: 20px;
+
+			&.active {
+				color: rgb(87, 0, 128);
+			}
+		}
+	}
+
+	&__line {
+		flex: 1;
+		height: 5px;
+		border-top: 1px solid gray;
+		border-bottom: 1px solid gray;
+		transition: all 0.5s ease;
+		background-color: rgb(240, 240, 240);
+
+		&.active {
+			background-color: rgb(18, 200, 54);
+			border-color: rgb(18, 200, 54);
+		}
+	}
+}

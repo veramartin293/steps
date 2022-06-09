@@ -1,0 +1,10 @@
+<div class="progress">
+	<ng-container *ngFor="let step of steps; index as i">
+		<ng-container *ngIf="activeStep$ | async as activeStep">
+			<div class="progress__step" [ngClass]="{ 'active': activeStep >= (i + 1) }">
+				<i [class]="step.iconClassesNames" [ngClass]="{ 'active': activeStep >= (i + 1) }"></i>
+			</div>
+			<div class="progress__line" [ngClass]="{ 'active': activeStep >= (i + 2)  }" *ngIf="step.next"></div>
+		</ng-container>
+	</ng-container>
+</div>
